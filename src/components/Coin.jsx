@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Coin = ({ coin, deleteCoin }) => {
 	return (
-		<Link to='/coindetail' className='text-decoration-none my-1 coin'>
+		<div className='text-decoration-none my-1 coin'>
 			<li className='coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark'>
 				<img className='coinlist-image' src={coin.image} alt='' />
-				<span className='text-decoration-none'>{coin.current_price}</span>
+				<span className='text-decoration-none'>${coin.current_price}</span>
 
 				<span
 					className={
@@ -29,7 +28,7 @@ const Coin = ({ coin, deleteCoin }) => {
 					}}
 					className='delete-icon far fa-times-circle text-danger'></i>
 			</li>
-		</Link>
+		</div>
 	);
 };
 
